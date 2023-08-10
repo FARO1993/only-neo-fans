@@ -1,0 +1,123 @@
+/**** INICIO ESTILOS PARA DESKTOP ****/
+
+/* Estilos para el botón de cerrar (close) en el lado derecho del Sidenav */
+.close-button-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidenav-container {
+    height: 100%;
+}
+
+.sidenav {
+    width: 250px;
+}
+
+.mat-drawer-backdrop {
+    display: none;
+}
+
+.container-elements {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo-image-sidenav {
+    max-height: 40px;
+}
+
+/* Estilos para el logo en el lado izquierdo del Sidenav */
+.logo-container-sidenav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+::ng-deep .mat-toolbar.mat-primary {
+    background: #29100D;
+    color: #ffffff;
+    min-height: 70px;
+    padding: 0 20px;
+    position: fixed;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+::ng-deep .mat-drawer-inner-container {
+    background: #29100D;
+    color: #ffffff !important
+}
+
+::ng-deep .mdc-list-item__primary-text {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-family: "Roboto", Sans-serif !important;
+}
+
+::ng-deep.mat-expansion-panel-header-title{
+    color: #ffffff !important;
+    background-color: #29100D;
+  }
+
+  ::ng-deep.mat-expansion-panel-header{
+    background-color: #29100D;
+    border: none;
+    padding: 0 16px !important;
+  }
+
+  ::ng-deep.mat-expansion-panel-content {
+    background-color: #29100D; ;
+  }
+  
+  ::ng-deep.mat-expansion-indicator::after {
+    color: #ffffff !important;  
+  }
+
+  ::ng-deep.mat-expansion-panel{
+    background-color: #29100D;
+    box-shadow: none !important;
+  }
+
+  ::ng-deep.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover{
+    background: none;
+  }
+
+mat-divider{
+    background: #ffffff;
+    width: 80%;
+}
+/**** FIN ESTILOS PARA DESKTOP ****/
+
+/**** INICIO ESTILOS PARA MOBILE ****/
+/* Estilos para el botón de menú en dispositivos móviles (lado derecho) */
+@media (max-width: 599px) {
+    .logo-image {
+        max-height: 60px;
+    }
+
+    .logo-image-sidenav {
+        max-height: 60PX;
+    }
+
+    .sidenav {
+        width: 80%;
+    }
+
+    /* Colocar el botón del menú en el lado derecho */
+    ::ng-deep .mat-toolbar-row {
+        justify-content: space-between;
+    }
+
+    ::ng-deep .mat-drawer{
+        position: fixed !important;
+    }
+
+    mat-nav-list{
+        padding:0 20px
+    }
+
+}
+/**** FIN ESTILOS PARA MOBILE ****/
+

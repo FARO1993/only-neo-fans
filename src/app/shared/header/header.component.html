@@ -1,0 +1,50 @@
+<mat-sidenav-container class="sidenav-container">
+    <!-- Sidenav -->
+    <mat-sidenav #sidenav mode="push" class="sidenav" position="end">
+        <!-- Logo en el lado izquierdo del Sidenav -->
+        <div class="container-elements">
+            <div class="logo-container-sidenav">
+                <img src="/assets/prueba.png" alt="Logo" class="logo-image-sidenav" />
+              </div>
+          
+              <!-- Botón de cerrar (close) en el lado derecho del Sidenav -->
+              <div class="close-button-container">
+                <button mat-icon-button (click)="sidenav.toggle()">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </div>
+        </div>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/" (click)="sidenav.toggle()">Home</a>
+        <mat-divider></mat-divider>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Services</mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="/management" (click)="sidenav.toggle()">Management</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item routerLink="/benefits" (click)="sidenav.toggle()">Benefits</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="/success-stories" (click)="sidenav.toggle()">Success Stories</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item [routerLink]="'/home'" [fragment]="'about'" (click)="scrollToSuccessStories()">About</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="/contact-us" (click)="sidenav.toggle()">Contact Us</a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+      <mat-toolbar color="primary">
+        <!-- Logo en el lado izquierdo -->
+        <div class="logo-container">
+          <img src="/assets/prueba.png" alt="Logo" class="logo-image" />
+        </div>
+  
+        <!-- Botón de menú para dispositivos móviles (lado derecho) -->
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar>
+  </mat-sidenav-container>

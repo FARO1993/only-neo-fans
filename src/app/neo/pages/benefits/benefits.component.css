@@ -1,0 +1,28 @@
+.benefits-container{
+    min-height: calc(100vh - 70px);
+}
+
+@media (max-width: 599px) {
+    .image-benefits-container{
+        background-image: linear-gradient(rgba(5,7,12,0.30), rgba(5,7,12,0.30)), url('/assets/benefits-background.jpg');/* Ruta de imagen y capa transparente */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+        background-position: center; /* Centra la imagen */
+        height: 500px;
+        width: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        margin-bottom: 0 !important;
+    }
+
+    .benefits-title{
+        font-size: 41px;
+        color: #FFFFFF;
+        font-family: "Barlow Semi Condensed", Sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        margin: 0;
+    }
+    
+
+}

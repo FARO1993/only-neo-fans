@@ -1,0 +1,35 @@
+<div>
+    <section class="footer-container">
+        <div class="info-footer-container" fxLayout.lt-md="row" fxLayoutAlign.lt-md="start start" fxLayoutGap.lt-md="100px">
+            <div fxLayoutAlign.lt-md="start start" fxLayout.lt-md="column" fxLayoutGap.lt-md="20px">
+                <img src="/assets/prueba.png" alt="Logo" class="logo-image-footer"/>
+                <div>
+                    <a routerLink="/management" class="footer-link">Management</a>
+                </div>
+                <div>
+                    <a routerLink="/benefits" class="footer-link">Benefits</a>
+                </div>
+                <div>
+                    <a routerLink="/success-stories" class="footer-link">Success Stories</a>
+                </div>
+                <div>
+                    <a class="footer-link" (click)="scrollToSuccessStories()">About</a>
+                </div>
+                <div>
+                    <a routerLink="/contact-us" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+            <div fxLayoutAlign.lt-md="end start" fxLayout.lt-md="column" class="social-media-footer">
+                <div>
+                    <p style="color: white;">Facebook</p>
+                </div>
+                <div>
+                    <p style="color: white;">X</p>
+                </div>
+                <div>
+                    <p style="color: white;">Instagram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -4,7 +4,7 @@
 
 @media (max-width: 599px) {
   .image-contact-container {
-    background-image: linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30)), url('/assets/contact-us.jpg');
+    background-image: linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30)), url('../../../../assets/contact-us.jpg');
     /* Ruta de imagen y capa transparente */
     background-size: cover;
     /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */

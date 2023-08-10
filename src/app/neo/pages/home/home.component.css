@@ -1,5 +1,5 @@
 .image-container {
-  background-image: linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30)), url('../assets/home-background.jpg');
+  background-image: linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30)), url('../../../../assets/home-background.jpg');
   /* Ruta de imagen y capa transparente */
   background-size: cover;
   /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
@@ -135,7 +135,7 @@
   }
 
   .image-container-about{
-    background-image: linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30)), url('../assets/about-background.jpg');
+    background-image: linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30)), url('../../../../assets/about-background.jpg');
     /* Ruta de imagen y capa transparente */
     background-size: cover;
     /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */

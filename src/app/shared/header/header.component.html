@@ -17,14 +17,14 @@
       <mat-nav-list>
         <a mat-list-item routerLink="/" (click)="sidenav.toggle()">Home</a>
         <mat-divider></mat-divider>
-        <mat-expansion-panel>
+        <mat-expansion-panel #panel>
           <mat-expansion-panel-header>
             <mat-panel-title>Services</mat-panel-title>
           </mat-expansion-panel-header>
           <mat-nav-list>
-            <a mat-list-item routerLink="/management" (click)="sidenav.toggle()">Management</a>
+            <a mat-list-item routerLink="/management" (click)="closePanelAndToggleSidenav(panel)">Management</a>
             <mat-divider></mat-divider>
-            <a mat-list-item routerLink="/benefits" (click)="sidenav.toggle()">Benefits</a>
+            <a mat-list-item routerLink="/benefits" (click)="closePanelAndToggleSidenav(panel)">Benefits</a>
           </mat-nav-list>
         </mat-expansion-panel>
         <mat-divider></mat-divider>

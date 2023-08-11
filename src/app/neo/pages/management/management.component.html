@@ -1,41 +1,23 @@
 <div>
     <section class="management-container" fxLayout.lt-md="column" fxLayout="row">
         <div>
-            <div class="image-management-container" fxLayoutAlign.lt-md="end center">
+            <div class="image-management-container" fxLayoutAlign.lt-md="center center">
                 <div class="shadow-mask">
-                    <div>
-                        <h2 class="mobile-component-title">MANAGEMENT</h2>
-                    </div>
-                    <div>
-                        <p class="mobile-component-subtitle">We management your account in several aspects to be the 0,1% model</p>
-                    </div>
+                    <h2 class="mobile-component-title">MANAGEMENT</h2>
                 </div>
             </div>
-            <div class="cards-container" fxLayoutGap.lt-md="10px" fxLayout.lt-md="column">
-                <div class="card">
-                    <h2 class="cards-title">Onlyfans management</h2>
-                    <p class="mobile-component-subtitle">Full account management is provided by the agency and is adapted to your requirements. Our skilled account managers handle the bulk of the work and you can concentrate creating content and earning money.</p>
+            <div class="management-cards-container" fxLayoutGap.lt-md="10px" fxLayout.lt-md="column">
+                <div>
+                    <h2 class="mobile-component-title" style="color: black; text-align: center;">We management your account in several aspects to be the 0,1% model</h2>
                 </div>
-                <div class="card" data-aos="zoom-in">
-                    <h2 class="cards-title">Account growth and promotion</h2>
-                    <p class="mobile-component-subtitle">Your social accounts will grow as a result of our skilled social media management team, and paid promotion strategies, increasing your subscriber count and income.</p>
-                </div>
-                <div class="card" data-aos="zoom-in">
-                    <h2 class="cards-title">Scheduling</h2>
-                    <p class="mobile-component-subtitle">As part of your customized distribution plan, we handle all of the content scheduling on OnlyFans and other social media platforms.</p>
-                </div>
-                <div class="card" data-aos="zoom-in">
-                    <h2 class="cards-title">Texting management</h2>
-                    <p class="mobile-component-subtitle">Our team is specialized in high revenue chatting. We can chat with your subs every day and you can have time off, seamlessly integrating your voice and brand.</p>
-                </div>
-                <div class="card" data-aos="zoom-in">
-                    <h2 class="cards-title">Account strategies and Personal branding</h2>
-                    <p class="mobile-component-subtitle">Utilize a custom-made content and promotion strategy to appeal to your current audience and draw in new subscribers in order to capitalize on your distinctive brand. We assist you in developing your creator persona and any necessary graphic assets.</p>
-                </div>
-                <div class="card" data-aos="zoom-in">
-                    <h2 class="cards-title">Stadistics consulting</h2>
-                    <p class="mobile-component-subtitle">Our team is great in the area of stadistics because we have a great data scientist manager. You can track your own data and we can draw conclusions through it in order to grow your audience and maximize your subs and earnings.</p>
-                </div>
+                <mat-card class="example-card" *ngFor="let management of managements" data-aos="zoom-in">
+                  <mat-card-header fxLayoutAlign.lt-md="start center">
+                    <mat-card-title>{{ management.title }}</mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <p class="management-card-text">{{ management.text }}</p>
+                  </mat-card-content>
+                </mat-card>
             </div>
         </div>
     </section>

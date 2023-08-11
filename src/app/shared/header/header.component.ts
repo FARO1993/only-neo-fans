@@ -1,6 +1,7 @@
 import { Component, ViewChild} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MatExpansionPanel } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class HeaderComponent {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
+  @ViewChild('sidenav') closeSidenav!: MatSidenav;
 
   constructor(
     private router: Router, 
@@ -16,6 +18,12 @@ export class HeaderComponent {
   ){
 
   }
+
+  closePanelAndToggleSidenav(panel: MatExpansionPanel): void {
+    panel.close();
+    this.sidenav.toggle();
+  }
+
   scrollToSuccessStories() {
     this.router.navigate([], {
       relativeTo: this.route,

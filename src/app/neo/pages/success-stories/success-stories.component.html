@@ -1,1 +1,27 @@
-<p>success-stories works!</p>
+<div>
+    <section class="success-stories-container">
+        <!-- Intro -->
+        <div class="success-stories-image-container" fxLayoutAlign.lt-md="center center">
+            <div class="shadow-mask">
+                <h2 class="mobile-component-title">SUCCESS STORIES</h2>
+            </div>  
+        </div>
+        <!-- Cards stories -->
+          <div class="success-stories-cards-container" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column" fxLayoutGap.lt-md="20px">
+            <div>
+                <h2 class="mobile-component-title" style="color: black; text-align: center;">There are many more.. only we choose the right ones</h2>
+            </div>
+            <mat-card class="example-card" *ngFor="let testimonial of testimonials" data-aos="zoom-in">
+              <mat-card-header fxLayoutAlign.lt-md="start center">
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{ testimonial.clientName }}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p class="success-text">{{ testimonial.review }}</p>
+                <button mat-raised-button (click)="toggleLearnMore(testimonial)">{{!testimonial.isLearnMore ? 'Show More...' : 'Show Less...'}}</button>
+                <p class="success-text" *ngIf="testimonial.isLearnMore">{{ testimonial.other }}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+    </section>
+</div>

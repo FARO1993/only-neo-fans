@@ -2,6 +2,11 @@
     min-height: calc(100vh - 70px);
 }
 
+.example-card {
+    max-width: 400px;
+    margin: 20px;
+  }
+
 @media (max-width: 599px) {
     .image-management-container{
         background-image: linear-gradient(rgba(5,7,12,0.30), rgba(5,7,12,0.30)), url('../../../../assets/management-background.jpg');/* Ruta de imagen y capa transparente */
@@ -21,5 +26,9 @@
         text-transform: uppercase;
         color: #FFFFFF;
         font-family: "Barlow Semi Condensed", Sans-serif;
+      }
+
+      .management-cards-container{
+        padding: 30px;
       }
 }

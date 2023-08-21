@@ -1,4 +1,4 @@
-import { Component, ViewChild} from '@angular/core';
+import { Component, ViewChild, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatExpansionPanel } from '@angular/material/expansion';
@@ -8,7 +8,7 @@ import { MatExpansionPanel } from '@angular/material/expansion';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
   @ViewChild('sidenav') closeSidenav!: MatSidenav;
 
@@ -19,6 +19,21 @@ export class HeaderComponent {
 
   }
 
+  ngOnInit(): void {
+    this.route.fragment.subscribe(fragment => {
+      if (fragment === 'about') {
+        this.scrollToAbout();
+      }
+    });
+  }
+
+  scrollToAbout(): void {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
   closePanelAndToggleSidenav(panel: MatExpansionPanel): void {
     panel.close();
     this.sidenav.toggle();
@@ -31,5 +46,10 @@ export class HeaderComponent {
     });
     
     this.sidenav.toggle();
+  }
+
+  homeRedirect() {
+    console.log('homeRedirect()')
+    this.router.navigate(['/home']);
   }
 }

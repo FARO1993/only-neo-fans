@@ -4,7 +4,7 @@
         <!-- Logo en el lado izquierdo del Sidenav -->
         <div class="container-elements">
             <div class="logo-container-sidenav">
-                <img src="assets/prueba.png" alt="Logo" class="logo-image-sidenav" />
+                <img src="assets/prueba.png" alt="Logo" class="logo-image-sidenav" (click)="homeRedirect()"/>
               </div>
           
               <!-- Botón de cerrar (close) en el lado derecho del Sidenav -->
@@ -30,7 +30,7 @@
         <mat-divider></mat-divider>
         <a mat-list-item routerLink="/success-stories" (click)="sidenav.toggle()">Success Stories</a>
         <mat-divider></mat-divider>
-        <a mat-list-item [routerLink]="'/home'" [fragment]="'about'" (click)="scrollToSuccessStories()">About</a>
+        <a mat-list-item [routerLink]="'/home'" (click)="scrollToAbout()">About</a>
         <mat-divider></mat-divider>
         <a mat-list-item routerLink="/contact-us" (click)="sidenav.toggle()">Contact Us</a>
       </mat-nav-list>

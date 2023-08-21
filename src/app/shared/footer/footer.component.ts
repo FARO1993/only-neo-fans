@@ -12,4 +12,9 @@ export class FooterComponent {
       successStoriesSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
-}
+
+  redirect(): void {
+    // Cambia la URL a la página de Instagram
+    window.location.href = 'https://www.instagram.com/onlyneo.fans/';
+  }
+} 

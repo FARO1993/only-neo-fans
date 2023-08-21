@@ -47,9 +47,4 @@ export class HeaderComponent implements OnInit {
     
     this.sidenav.toggle();
   }
-
-  homeRedirect() {
-    console.log('homeRedirect()')
-    this.router.navigate(['/home']);
-  }
 }
